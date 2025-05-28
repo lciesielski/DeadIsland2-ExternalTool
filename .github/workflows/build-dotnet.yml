@@ -1,4 +1,4 @@
-name: Publish .NET Executable (Release x64) on Linux for Windows
+name: Dead Island 2 Memory Tool
 
 on:
   push:
@@ -23,5 +23,5 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
-        name: DeadIsland2Tool-Windows-x64-Executable-From-Linux
+        name: DeadIsland2-MemoryTool
         path: DeadIsland2-ExternalHack/bin/Release/net8.0-windows/win-x64/publish/DeadIsland2-ExternalHack.exe

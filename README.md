@@ -26,10 +26,11 @@ SetCurrentMeeleWeaponAttributeType(DamageAttributes, externalMemory);
 
 ## Usage
 
-1.  Download the latest binary from **Releases**.
-2.  Start Dead Island 2.
-3.  Load your slayer and enter the game world.
-4.  Run the tool's `.exe` file.
+1.  **Install .NET 8.0 Desktop Runtime (x64)**: If you don't have it already, download and install the [.NET 8.0 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/8.0) from Microsoft. (Select the ".NET Desktop Runtime" x64 installer).
+2.  Download the latest binary from **Releases**.
+3.  Start Dead Island 2.
+4.  Load your slayer and enter the game world.
+5.  Run the tool's `.exe` file.
 
 ## Does it work in COOP?
 
