@@ -1,0 +1,33 @@
+name: Build .NET Executable (Release x64)
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore DeadIsland2-ExternalHack/DeadIsland2-ExternalHack.csproj
+
+    - name: Build project (Release x64)
+      run: dotnet build DeadIsland2-ExternalHack/DeadIsland2-ExternalHack.csproj --configuration Release --runtime win-x64 --no-restore
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: DeadIsland2Tool-Windows-x64-Executable
+        # Corrected path: points to the bin folder INSIDE your project's subfolder
+        path: DeadIsland2-ExternalHack/bin/Release/net8.0-windows/win-x64/*
