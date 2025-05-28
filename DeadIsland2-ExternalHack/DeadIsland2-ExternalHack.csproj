@@ -5,7 +5,10 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>DeadIsland2_ExternalHack</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Platforms>AnyCPU;x64</Platforms>
+    <Platforms>x64</Platforms>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
