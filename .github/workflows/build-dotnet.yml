@@ -1,4 +1,4 @@
-name: Publish .NET Executable (Release x64)
+name: Publish .NET Executable (Release x64) on Linux for Windows
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish-job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest 
 
     steps:
     - name: Checkout code
@@ -17,11 +17,11 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Publish project (Release)
-      run: dotnet publish DeadIsland2-ExternalHack/DeadIsland2-ExternalHack.csproj --configuration Release
+    - name: Publish project (Release for Windows x64)
+      run: dotnet publish DeadIsland2-ExternalHack/DeadIsland2-ExternalHack.csproj --configuration Release --runtime win-x64
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
-        name: DeadIsland2Tool-Windows-x64-Executable
+        name: DeadIsland2Tool-Windows-x64-Executable-From-Linux
         path: DeadIsland2-ExternalHack/bin/Release/net8.0-windows/win-x64/publish/DeadIsland2-ExternalHack.exe
