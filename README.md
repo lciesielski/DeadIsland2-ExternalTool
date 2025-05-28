@@ -1,5 +1,7 @@
 # Dead Island 2 External Tool
 
+[![Dead Island 2 Memory Tool](https://github.com/lciesielski/DeadIsland2-ExternalTool/actions/workflows/build-dotnet.yml/badge.svg)](https://github.com/lciesielski/DeadIsland2-ExternalTool/actions/workflows/build-dotnet.yml)
+
 An external tool for Dead Island 2, created as a fun exercise with Unreal Engine, offering several in-game advantages.
 
 **Features:**
